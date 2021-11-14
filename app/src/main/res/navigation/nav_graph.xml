@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/clientRegistrationFragment"
+        android:name="com.rick.cafebistro.clientregiistration.ClientRegistrationFragment"
+        android:label="ClientRegistrationFragment" />
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.rick.cafebistro.mainscreen.ui.MainScreenFragment"
+        android:label="MainScreenFragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_stockManagementFragment"
+            app:destination="@id/stockManagementFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_clientRegistrationFragment"
+            app:destination="@id/clientRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockManagementFragment"
+        android:name="com.rick.cafebistro.stockmanagement.StockManagementFragment"
+        android:label="StockManagementFragment" />
+</navigation>

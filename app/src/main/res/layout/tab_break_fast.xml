@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/breakFastRV"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_beverage"
+
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/plusOneBreak"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintStart_toEndOf="@id/breakFastRV"
+        app:layout_constraintBottom_toBottomOf="@id/breakFastRV"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

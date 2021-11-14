@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CafeBistro</string>
+    <string name="regis">Regis</string>
+    <string name="stock">Stock</string>
+    <string name="main">Main</string>
+    <string name="client_top">Arya Stark : 2 Seat | Table:Garden 2 \n Order#1434345</string>
+    <string name="price">500</string>
+    <string name="quantity">3</string>
+    <string name="product">Cerveja 2M</string>
 </resources>

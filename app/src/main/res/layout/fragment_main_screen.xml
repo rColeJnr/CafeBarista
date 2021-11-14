@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mainscreen.ui.MainScreenFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/clientRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/client_top"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/selectedItemImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_question_mark"
+        app:layout_constraintEnd_toEndOf="@id/clientRequest"
+        app:layout_constraintStart_toStartOf="@id/clientRequest"
+        app:layout_constraintTop_toBottomOf="@id/clientRequest" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/selectedItemNmae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Selected an item"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintEnd_toEndOf="@id/selectedItemImage"
+        app:layout_constraintStart_toStartOf="@id/selectedItemImage"
+        app:layout_constraintTop_toBottomOf="@id/selectedItemImage" />
+
+    <LinearLayout
+        android:id="@+id/calculatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedItemNmae">
+
+        <LinearLayout style="@style/buttonRow">
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="1" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="2" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="3" />
+
+            <Button
+                style="@style/buttonOperator"
+                android:text="x" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/buttonRow">
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="4" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="5" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="6" />
+
+            <Button
+                style="@style/buttonOperator"
+                android:text="-" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/buttonRow">
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="7" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="8" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="9" />
+
+            <Button
+                style="@style/buttonOperator"
+                android:text="+" />
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/buttonRow">
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="⌫" />
+
+            <Button
+                style="@style/buttonNumber"
+                android:text="Set" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalAmountLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:background="@color/purple_500"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/calculatorLayout"
+        app:layout_constraintStart_toStartOf="@id/calculatorLayout"
+        app:layout_constraintTop_toBottomOf="@id/calculatorLayout">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Total"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="$ 1200"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSelectedItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintEnd_toEndOf="@id/totalAmountLL"
+        app:layout_constraintStart_toStartOf="@id/totalAmountLL"
+        app:layout_constraintTop_toBottomOf="@id/totalAmountLL"
+        tools:listitem="@layout/item_total"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@id/orderOptionsLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clientRequest"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tabLL">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"
+            android:layout_gravity="top"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderOptionsLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tabLL">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/discount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="DISCOUNT" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="SETTLE" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="FINISH" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="CANCEL" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

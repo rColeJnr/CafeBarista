@@ -3,10 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/fragment_client_registration.xml" value="0.1" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/fragment_main_screen.xml" value="0.5" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/item_beverage.xml" value="0.245703125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/item_total.xml" value="0.17578125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/nav_header.xml" value="0.245703125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/tab_break_fast.xml" value="0.245703125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/tab_dessert.xml" value="0.17578125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/layout/tab_main_course.xml" value="0.2" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Mine/CafeBistro/app/src/main/res/menu/drawer.xml" value="0.1" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/activity_authentication.xml" value="0.15125" />
         <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/activity_main.xml" value="0.180859375" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/authentication_fragment.xml" value="0.15125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/fragment_client_registration.xml" value="0.15125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/fragment_main_screen.xml" value="0.245703125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/fragment_stock_management.xml" value="0.15125" />
         <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/item_beverage.xml" value="0.25" />
         <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/main_screen_fragment.xml" value="0.180859375" />
         <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/layout/nav_header.xml" value="0.245703125" />
+        <entry key="..\:/Users/rColeJnr/AndroidStudioProjects/Tutorials/CafeBistro/app/src/main/res/menu/drawer.xml" value="0.13559322033898305" />
       </map>
     </option>
   </component>
