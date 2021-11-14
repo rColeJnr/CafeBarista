@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/beverage"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_action_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:id="@+id/beverageName"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="beverage"/>
+
+</LinearLayout>
