@@ -7,6 +7,23 @@ import com.rick.cafebistro.mainscreen.domain.MainCourse
 import kotlinx.coroutines.flow.Flow
 
 @Dao
+interface MainCourseDao {
+
+    @Query("SELECT * FROM maincourse")
+    fun getMainCourses(): Flow<List<MainCourse>>
+
+    @Query("SELECT * FROM maincourse WHERE id = :id")
+    fun getMainCourseById(id: Int): MainCourse?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveMainCourse(mainCourse: MainCourse)
+
+    @Delete
+    suspend fun deleteMainCourse(mainCourse: MainCourse)
+
+}
+
+@Dao
 interface DessertDao {
 
     @Query("SELECT * FROM dessert")
@@ -24,29 +41,12 @@ interface DessertDao {
 }
 
 @Dao
-interface MainCourseDao {
-
-    @Query("SELECT * FROM maincourse")
-    fun getMainCourses(): Flow<List<MainCourse>>
-
-    @Query("SELECT * FROM dessert WHERE id = :id")
-    fun getMainCourseById(id: Int): MainCourse?
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMainCourse(mainCourse: MainCourse)
-
-    @Delete
-    suspend fun deleteMainCourse(mainCourse: MainCourse)
-
-}
-
-@Dao
 interface BreakFastDao {
 
     @Query("SELECT * FROM breakfast")
     fun getBreakfasts(): Flow<List<BreakFast>>
 
-    @Query("SELECT * FROM dessert WHERE id = :id")
+    @Query("SELECT * FROM breakfast WHERE id = :id")
     fun getBreakFastById(id: Int): BreakFast?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

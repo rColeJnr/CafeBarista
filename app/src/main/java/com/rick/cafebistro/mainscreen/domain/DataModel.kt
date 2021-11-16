@@ -4,7 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.rick.cafebistro.R
 
-@Entity
+@Entity(
+    tableName = "breakfast"
+)
 data class BreakFast(
     @PrimaryKey val id: Int? = null,
     val name: String,
@@ -26,7 +28,9 @@ enum class BreakFastImages(drawable: Int){
     }
 }
 
-@Entity
+@Entity(
+    tableName = "maincourse"
+)
 data class MainCourse(
     @PrimaryKey val id: Int? = null,
     val name: String,
@@ -45,7 +49,9 @@ enum class MainCourseImages(drawable: Int){
     }
 }
 
-@Entity
+@Entity(
+    tableName = "dessert"
+)
 data class Dessert(
     @PrimaryKey val id: Int? = null,
     val name: String,
