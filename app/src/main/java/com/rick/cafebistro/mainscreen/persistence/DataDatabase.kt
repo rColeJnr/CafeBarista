@@ -14,6 +14,10 @@ abstract class DessertDatabase: RoomDatabase() {
 
     abstract val dessertDao: DessertDao
 
+    companion object {
+        const val DESSERT_DATABASE = "DESSERT_DATABASE"
+    }
+
 }
 
 @Database(
@@ -24,6 +28,10 @@ abstract class MainCourseDatabase: RoomDatabase() {
 
     abstract val mainCourseDao: MainCourseDao
 
+    companion object {
+        const val MAIN_COURSE_DATABASE = "MAIN_COURSE_DATABASE"
+    }
+
 }
 
 @Database(
@@ -33,5 +41,9 @@ abstract class MainCourseDatabase: RoomDatabase() {
 abstract class BreakFastDatabase: RoomDatabase() {
 
     abstract val breakFastDao: BreakFastDao
+
+    companion object {
+        const val BREAKFAST_DATABASE = "BREAKFAST_DATABASE"
+    }
 
 }

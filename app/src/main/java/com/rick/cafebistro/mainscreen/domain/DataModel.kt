@@ -64,3 +64,5 @@ enum class DessertImage(drawable: Int){
         val Default = DESSERT1
     }
 }
+
+class InvalidDataException(message: String): Exception(message)
