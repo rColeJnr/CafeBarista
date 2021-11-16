@@ -69,7 +69,11 @@ object MainScreenModule {
 
     @Provides
     @Singleton
-    fun providesDataUseCases(mainCourseRepository: IMainCourseRepository, dessertRepository: IDessertRepository, breakfastRepository: IBreakFastRepository,): DataUseCases{
+    fun providesDataUseCases(
+        mainCourseRepository: IMainCourseRepository,
+        dessertRepository: IDessertRepository,
+        breakfastRepository: IBreakFastRepository,
+    ): DataUseCases{
         return DataUseCases(
             getMainCourses = GetMainCourses(mainCourseRepository),
             getDesserts = GetDesserts(dessertRepository),
